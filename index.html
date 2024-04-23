@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <form action="" id="educationForm">
+        <h1>Registration Form</h1>
+        <h2>Personal Details</h2>
+
+        <div id="personalInfoContainer">
+            <div class="userInfo">
+
+                <label for="fullName">Full Name: </label>
+                <input type="text" placeholder="Full Name" id="fullName" oninput="isEmpty()"
+                    onkeydown="validInput(event,'fullName')">
+
+                <label for="gender">Gender: </label>
+                <select name="gender" id="gender" oninput="isEmpty()">
+                    <option value="">Select You Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+
+            </div>
+
+            <div class="parentDetail">
+
+                <label for="fatherName">Father's Name: </label>
+                <input type="text" placeholder="Father's Name" id="fatherName" oninput="isEmpty()"
+                    onkeydown="validInput(event,'fatherName')">
+
+                <label for="motherName">Mother's Name: </label>
+                <input type="text" placeholder="Mother's Name" id="motherName" oninput="isEmpty()"
+                    onkeydown="validInput(event,'motherName')">
+            </div>
+        </div>
+
+        <div class="educationHeading">
+            <h2>Education Details</h2>
+        </div>
+        <div id="container">
+            <div class="qualificationContainer">
+                <input type="text" placeholder="Degree/Certificate" onkeydown="validInput(event,'Degree/Certificate')">
+                <input type="text" placeholder="Institution/University"
+                    onkeydown="validInput(event,'Institution/University')">
+                <input type="text" placeholder="Major" onkeydown="validInput(event,'Major')">
+                <input type="text" placeholder="Year of passing" maxlength="4"
+                    onkeydown="validInput(event,'Year of passing')">
+                <div class="addButton"><i class="fa-solid fa-plus"></i></div>
+                <div class="removeButton"><i class="fa-solid fa-square-xmark"></i></div>
+            </div>
+            <button type="submit" id="submitButton" onclick="storeData(event)">Submit</button>
+        </div>
+    </form>
+
+    <script src="./assets/javascript/script.js"></script>
+</body>
+
+</html>
